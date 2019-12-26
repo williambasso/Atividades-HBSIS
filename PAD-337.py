@@ -2,11 +2,11 @@ import random
 score = 0
 while score < 21:
     cartas = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'A', 'J', 'Q', 'K']
-    print('Quer uma carta?(s/n)')
+    print('\033[1;32mQuer uma carta?\033[1;33m(s/n)\033[m')
     pergunta = input('')
     if pergunta.lower().strip() == 's':
         carta_retirada = random.choice(cartas)
-        print(f'Carta retirada: {carta_retirada}')
+        print(f'\033[1;36mCarta retirada: {carta_retirada}\033[m')
 
         try:
             valor_carta = int(carta_retirada)
@@ -19,17 +19,17 @@ while score < 21:
                 valor_carta = 10
 
         score += valor_carta
-        print(f'Score: {score}')
+        print(f'\033[1;34mScore: {score}\033[m')
 
     elif pergunta.lower().strip() == 'n':
-        print('Você saiu do jogo!')
+        print('\033[4;31mVocê saiu do jogo!\033[m')
         break
 
 
 if score == 21:
-    print('Você ganhou!')
+    print('\033[1;35mVocê ganhou!\033[m')
 elif score > 21:
-    print('Você perdeu!')
+    print('\033[1;31mVocê perdeu!\033[m')
 
 
 
@@ -37,7 +37,7 @@ elif score > 21:
 
 
 
-walloliveira
+
 
 
 
