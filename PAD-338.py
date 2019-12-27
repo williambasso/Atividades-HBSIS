@@ -3,8 +3,8 @@ acertos = []
 f = Fruta()
 fruta_sorteio = f.sortear_fruta()
 print(fruta_sorteio)
-menu = int(input('Digite 1 para continuar ou 2 para sair!'))
-while menu != 2:
+menu = input('Digite 1 para Entrar ou 2 para Sair!\n')
+while menu != '2':
     if f.tentativa_de_acerto(acertos,fruta_sorteio):
         break
     letra = f.letra_digitada()
